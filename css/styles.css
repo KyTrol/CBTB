@@ -9,14 +9,21 @@ body {
 	margin: 0;
 }
 
-h4 {
+h1, h2, h3, h4 {
 	font-weight: 400;
+}
+
+h4 {
 	margin-bottom: 10px;
 }
 
 .title-container {
 	width: 100%;
-	display: flex;
+	display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: flex;
 }
 
 .logo {
@@ -39,12 +46,10 @@ h4 {
 .title h1 {
 	color: #6c122c;
 	font-size: 20px;
-	font-weight: 400;
 }
 
 .title h3 {
 	font-size: 16px;
-	font-weight: 400;
 }
 
 .media-links {
@@ -53,7 +58,11 @@ h4 {
 }
 
 .media {
-	display: flex;
+	display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: flex;
 	width: 100%;
 }
 
@@ -62,6 +71,7 @@ h4 {
 	line-height: 2em;
 	vertical-align: middle;
 }
+
 .media-icon {
 	width: 24px;
 	padding-top: .5em;
@@ -69,6 +79,7 @@ h4 {
 }
 
 .media-name {
+	display: none;
 	width: 90%;
 	padding: .5em;
 }
@@ -98,8 +109,13 @@ h4 {
 
 .featured {
 	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
+	display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: flex;
+	-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
 	background-color: #6c122c;
 	box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
 							inset 0px 11px 9px -5px rgba(0,0,0,0.75);
@@ -107,7 +123,11 @@ h4 {
 
 .featured-group {
 	width: 100%;
-	display: flex;
+	display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: flex;
 }
 
 .featured-group:first-child {
@@ -147,10 +167,14 @@ hr {
 	margin-bottom: 1em;
 }
 
+.lngc h3 {
+	font-weight: 700;
+}
+
 iframe {
 	border-radius: .5em;
 	border: 4px solid #2e7d3a;
-	width: 289px;
+	width: 275px;
 	height: 158px;
 	margin-left: .5em;
 	margin-right: .5em;
@@ -163,6 +187,7 @@ iframe {
 	margin: 0 auto;
 
 }
+
 .articles {
 	padding: .75em;
 	background-color: #6c122c;
@@ -195,24 +220,35 @@ iframe {
 	.title h1 { font-size: 36px; }
 	.title h3 { font-size: 24px; }
 	.media-links { 
-		display: flex;
-		flex-wrap: wrap; 
+		display: -webkit-flex;
+  	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: -moz-box;
+  	display: flex;
+  	-ms-flex-wrap: wrap;
+				flex-wrap: wrap; 
 		width: 30%; 
 	}
 
 	h4 { font-size: 18px; }
-	iframe { width: 521px; height: 295px; }
+	iframe { width: 518px; height: 295px; }
 }
 
 @media screen and (min-width: 700px) {
+	.title { width: 80%; }
+	.media-links { width: 30%; }
+	.articles { 
+		display: -webkit-flex;
+  	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: -moz-box;
+  	display: flex; 
+	}
+
 	.article {
 		margin-left: 1em;
 		margin-right: 1em;
 	}
-	.articles {
-		display: flex;
-	}
-	.title { width: 80%; }
-	.media-links { width: 30%; }
-	iframe { width: 560px; height: 315px; }
+
+	iframe { width: 554px; height: 315px; }
 }
