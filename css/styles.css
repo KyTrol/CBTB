@@ -17,19 +17,15 @@ h4 {
 	margin-bottom: 10px;
 }
 
-.title-container {
+.header {
 	width: 100%;
-	display: -webkit-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -moz-box;
-  display: flex;
+	text-align: right;
 }
 
 .logo {
-	width: 9%;
+	display: inline-block;
+	float: left;
 	margin-left: .5em;
-	min-width: 50px;
 }
 
 .logo img {
@@ -38,50 +34,50 @@ h4 {
 
 .title {
 	margin-left: auto;
-	width: 70%;
 	text-align: right;
 	margin-right: .5em;
+	display: inline-block;
 }
 
 .title h1 {
 	color: #6c122c;
-	font-size: 20px;
+	font-size: 23px;
+	font-weight: 700;
 }
 
 .title h3 {
-	font-size: 16px;
+	font-size: 18px;
 }
 
 .media-links {
 	display: none;
-	width: 15%;
+	margin-left: .5em;
+	float: left;
 }
 
 .media {
-	display: -webkit-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -moz-box;
-  display: flex;
-	width: 100%;
+	text-align: left;
+	margin-top: .25em;
+	margin-bottom: .25em;
 }
 
 .media h5 {
-	margin: 0;
-	line-height: 2em;
+	display: inline;
+	line-height: 40px;
 	vertical-align: middle;
 }
 
 .media-icon {
 	width: 24px;
-	padding-top: .5em;
-	padding-bottom: .5em;
+	height: 24px;
+	display: inline-block;
+	text-align: left;
+	margin-right: .5em;
 }
 
-.media-name {
-	display: none;
-	width: 90%;
-	padding: .5em;
+.media-icon img {
+	line-height: 40px;
+	vertical-align: middle;
 }
 
 .media-icon a {
@@ -89,9 +85,9 @@ h4 {
 	display: inline-block;
 }
 
-.media-icon img {
-	display: block;
-}
+#fb-name,
+#tw-name,
+#inst-name { opacity: 0; }
 
 .landing {
 	width: 100%;
@@ -109,42 +105,23 @@ h4 {
 
 .featured {
 	width: 100%;
-	display: -webkit-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -moz-box;
-  display: flex;
-	-ms-flex-wrap: wrap;
-			flex-wrap: wrap;
 	background-color: #6c122c;
 	box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
 							inset 0px 11px 9px -5px rgba(0,0,0,0.75);
-}
-
-.featured-group {
-	width: 100%;
-	display: -webkit-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -moz-box;
-  display: flex;
-}
-
-.featured-group:first-child {
-	margin-top: .75em;
-	margin-bottom: .75em;
-}
-
-.featured-group:last-child {
-	margin-bottom: .75em;
+	text-align: center;
 }
 
 .featured-icon {
-	text-align: center;
-	width: 100%;
+	width: 44%;
+	padding: .5em;
 	margin-right: .5em;
 	margin-left: .5em;
+	display: inline-block;
+	box-sizing: border-box;
 }
+
+.featured-icon:first-child { margin-top: .75em; }
+.featured-icon:last-child { margin-bottom: .75em; }
 
 .featured-icon img {
 	width: 100%;
@@ -185,10 +162,11 @@ iframe {
 	max-width: 560px;
 	max-height: 315px;
 	margin: 0 auto;
-
 }
 
 .articles {
+	text-align: center;
+	width: 100%;
 	padding: .75em;
 	background-color: #6c122c;
 	box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
@@ -197,17 +175,19 @@ iframe {
 }
 
 .article {
+	text-align: left;
 	width: 100%;
+	margin: 0 auto;
+}
+
+.article p {
+	padding-right: 1em;
 }
 
 @media screen and (min-width: 425px) {
-	.featured-group {
-		width: 50%;
-		margin-top: .75em;
-		margin-bottom: .75em;
-	}
+	.featured-icon { width: 20%; }
 
-	.title h1 { font-size: 24px; }
+	.title h1 { font-size: 27px; }
 	.title h3 { font-size: 20px; }
 	iframe { width: 389px; height: 222px; }
 }
@@ -219,36 +199,19 @@ iframe {
 
 	.title h1 { font-size: 36px; }
 	.title h3 { font-size: 24px; }
-	.media-links { 
-		display: -webkit-flex;
-  	display: -webkit-box;
-  	display: -ms-flexbox;
-  	display: -moz-box;
-  	display: flex;
-  	-ms-flex-wrap: wrap;
-				flex-wrap: wrap; 
-		width: 30%; 
+	.media-links {  
+		display: inline-block; 
 	}
 
 	h4 { font-size: 18px; }
 	iframe { width: 518px; height: 295px; }
 }
 
-@media screen and (min-width: 700px) {
-	.title { width: 80%; }
-	.media-links { width: 30%; }
-	.articles { 
-		display: -webkit-flex;
-  	display: -webkit-box;
-  	display: -ms-flexbox;
-  	display: -moz-box;
-  	display: flex; 
-	}
+@media screen and (min-width: 700px) { iframe { width: 554px; height: 315px; } }
 
+@media screen and (min-width: 850px) {
 	.article {
-		margin-left: 1em;
-		margin-right: 1em;
+		display: inline-block;
+		width: 30%;
 	}
-
-	iframe { width: 554px; height: 315px; }
 }
