@@ -30,6 +30,7 @@ h4 {
 
 .logo img {
 	width: 50px;
+	display: block;
 }
 
 .title {
@@ -112,6 +113,7 @@ h4 {
 }
 
 .featured {
+	display: none;
 	width: 100%;
 	background-color: #6c122c;
 	box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
@@ -186,16 +188,42 @@ iframe {
 .article {
 	text-align: left;
 	width: 100%;
-	margin: 0 auto;
+	margin: .5em auto;
+	vertical-align: top;
+	font-family: "Roboto", sans-serif;
 }
 
+.article h4 {
+	font-family: "Roboto Slab", sans-serif;
+}
 .article p {
 	padding-right: 1em;
 }
 
-.article.expanded {
-	width: 100%;
+.article form {
 	text-align: center;
+	height: 73px;
+}
+
+#donate {
+	position: relative;
+	cursor: pointer;
+	background-color: #2e7d3a;
+	color: #bdbdbd;
+	width: 150px;
+	height: 65px;
+	border-radius: .5em;
+	border: 1px solid #1b5320;
+	font-size: 24px;
+	font-family: "Roboto Slab", sans-serif;
+	box-shadow: 0px 8px 0px 0px #1b5320;
+}
+
+#donate:focus { outline: none;}
+#donate:active {
+	position: relative;
+	top: 5px;
+	box-shadow: 0 4px 0 0 #1b5320;
 }
 
 @media screen and (min-width: 425px) {
@@ -207,31 +235,26 @@ iframe {
 }
 
 @media screen and (min-width: 560px) {
-	.landing {
-		display: block;
-	}
-
+	.landing { display: block; }
 	.title h1 { font-size: 36px; }
 	.title h3 { font-size: 24px; }
-	.media-links {  
-		display: inline-block; 
-	}
-
+	.media-links { display: inline-block; }
 	h4 { font-size: 18px; }
-	iframe { width: 518px; height: 295px; }
+	iframe { 
+		width: 518px;
+		height: 295px;
+	}
 }
 
-@media screen and (min-width: 700px) { iframe { width: 554px; height: 315px; } }
+@media screen and (min-width: 700px) { 
+	iframe { width: 554px; height: 315px; } 
+}
 
 @media screen and (min-width: 850px) {
 	.article {
 		display: inline-block;
 		width: 30%;
 	}
-}
-
-* {
-	
 }
 
 .people {
@@ -244,15 +267,19 @@ iframe {
 	text-align: center;
 }
 
-.person h4 {
+.person h3 {
 	text-align: center;
 	margin-top: .5em;
 	font-size: 20px;
 	font-family: "Roboto Slab", sans-serif;
+	margin-bottom: .5em;
 }
 
-.person:last-child h4 {
+.person h5 {
+	font-weight: 300;
+	margin-top: 0;
 	margin-bottom: 0;
+	font-size: 16px;
 }
 
 .person {
@@ -279,7 +306,7 @@ iframe {
 	box-sizing: border-box;
 	display: none;
 	text-align: justify;
-	
+	font-family: "Roboto", sans-serif;
 }
 
 .summary p { 
