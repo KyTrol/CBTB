@@ -17,6 +17,12 @@ h4 {
 	margin-bottom: 10px;
 }
 
+hr {
+	 border: none;
+   background-color: #2e7d3a;
+   height: 2px;
+}
+
 .header {
 	width: 100%;
 	text-align: right;
@@ -40,11 +46,12 @@ h4 {
 	display: inline-block;
 }
 
+h1 { font-family: "Roboto Slab", sans-serif }
+
 .title h1 {
 	color: #6c122c;
 	font-size: 20px;
 	font-weight: 700;
-	font-family: "Roboto Slab", sans-serif;
 }
 
 .title h3 {
@@ -139,11 +146,8 @@ h4 {
 	max-width: 125px;
 }
 
-hr {
+.article hr {
 	 margin-top: 0;
-	 border: none;
-   background-color: #2e7d3a;
-   height: 2px;
    width: 185px;
    margin-left: 0;
 }
@@ -178,7 +182,8 @@ iframe {
 .articles {
 	text-align: center;
 	width: 100%;
-	padding: .75em;
+	padding-top: .75em;
+	padding-bottom: .75em;
 	background-color: #6c122c;
 	box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
 							inset 0px 11px 9px -5px rgba(0,0,0,0.75);
@@ -196,6 +201,7 @@ iframe {
 .article h4 {
 	font-family: "Roboto Slab", sans-serif;
 }
+
 .article p {
 	padding-right: 1em;
 }
@@ -226,48 +232,40 @@ iframe {
 	box-shadow: 0 4px 0 0 #1b5320;
 }
 
-@media screen and (min-width: 425px) {
-	.featured-icon { width: 20%; }
-
-	.title h1 { font-size: 27px; }
-	.title h3 { font-size: 20px; }
-	iframe { width: 389px; height: 222px; }
-}
-
-@media screen and (min-width: 560px) {
-	.landing { display: block; }
-	.title h1 { font-size: 36px; }
-	.title h3 { font-size: 24px; }
-	.media-links { display: inline-block; }
-	h4 { font-size: 18px; }
-	iframe { 
-		width: 518px;
-		height: 295px;
-	}
-}
-
-@media screen and (min-width: 700px) { 
-	iframe { width: 554px; height: 315px; } 
-}
-
-@media screen and (min-width: 850px) {
-	.article {
-		display: inline-block;
-		width: 30%;
-	}
-}
-
-.people {
-	width: 80%;
-	margin: 0 auto;
-	background-color: #e0e0e0;
-	border-radius: .5em;
-	padding: 1em;
-	border: 4px solid #2e7d3a;
+.team-header {
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	border-top: 3px solid #2e7d3a;
+	border-bottom: 3px solid #2e7d3a;
 }
 
-.person h3 {
+.team-header h1 {
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 4px;
+	font-size: 24px;
+}
+
+.team-header hr {
+	width: 24%;
+	display: none;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
+
+.team {
+	width: 100%;
+	padding: 1em;
+	text-align: center;
+	background-color: #6c122c;
+	box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
+							inset 0px 11px 9px -5px rgba(0,0,0,0.75);
+	color: #bdbdbd;
+}
+
+.member h3 {
 	text-align: center;
 	margin-top: .5em;
 	font-size: 20px;
@@ -275,16 +273,17 @@ iframe {
 	margin-bottom: .5em;
 }
 
-.person h5 {
+.member h5 {
 	font-weight: 300;
 	margin-top: 0;
 	margin-bottom: 0;
 	font-size: 16px;
 }
 
-.person {
+.member {
 	display: inline-block;
 	margin: .5em;
+	width: 171px;
 }
 
 .portrait-left,
@@ -313,7 +312,48 @@ iframe {
 	margin: 0; 
 }
 
-@media screen and (min-width: 844px) {
+@media screen and (min-width: 425px) {
+	.featured-icon { width: 20%; }
+
+	.title h1 { font-size: 27px; }
+	.title h3 { font-size: 20px; }
+	iframe { width: 389px; height: 222px; }
+	.team-header h1 {
+		font-size: 28px;
+		letter-spacing: 6px;
+	}
+}
+
+@media screen and (min-width: 560px) {
+	.landing { display: block; }
+	.title h1 { font-size: 36px; }
+	.title h3 { font-size: 24px; }
+	.media-links { display: inline-block; }
+	h4 { font-size: 18px; }
+	iframe { 
+		width: 518px;
+		height: 295px;
+	}
+}
+
+@media screen and (min-width: 700px) { 
+	iframe { width: 554px; height: 315px; }
+}
+
+@media screen and (min-width: 830px) {
+	.team-header { border: none; }
+	.team-header h1 { margin-bottom: 0; }
+	.team-header hr { display: block; }
+	.team { 
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: .5em;
+		background-color: #e0e0e0;
+		color: #424242;
+		box-shadow: 0 0 11px 2px rgba(0,0,0,0.75);
+	}
+	.member { width: 98%;}
 	.summary { display: inline-block; }
 	.portrait-left,
 	.portrait-right { width: 150px; }
@@ -321,3 +361,19 @@ iframe {
 	.portrait-left { float: left; margin-right: .5em; }
 	.portrait-right { float: right; margin-left: .5em; }
 }
+
+@media screen and (min-width: 850px) {
+	.article {
+		display: inline-block;
+		width: 30%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.team {
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
