@@ -68,10 +68,11 @@ h1 { font-family: "Roboto Slab", sans-serif }
 }
 
 .media {
-	width: 26%;             /* Remove to make media links vertical. */
+	width: 32%;             /* Remove to make media links vertical. */
 	display: inline-block;  /* Remove to make media links vertical. */
 	text-align: left;
-	margin: .25em .5em;
+	margin-top: .25em;
+	margin-bottom: .25em;
 }
 
 .media h5 {
@@ -120,11 +121,11 @@ h1 { font-family: "Roboto Slab", sans-serif }
 }
 
 .featured {
-	display: none;
+	display: block;
 	width: 100%;
 	background-color: #6c122c;
-	box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
-							inset 0px 11px 9px -5px rgba(0,0,0,0.75);
+	/*box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
+				  inset 0px 11px 9px -5px rgba(0,0,0,0.75);*/
 	text-align: center;
 }
 
@@ -146,12 +147,6 @@ h1 { font-family: "Roboto Slab", sans-serif }
 	max-width: 125px;
 }
 
-.article hr {
-	 margin-top: 0;
-   width: 185px;
-   margin-left: 0;
-}
-
 .lngc {
 	text-align: center;
 	margin-top: 1em;
@@ -165,7 +160,7 @@ h1 { font-family: "Roboto Slab", sans-serif }
 
 iframe {
 	border-radius: .5em;
-	border: 4px solid #2e7d3a;
+	border: 4px solid #424242;
 	width: 275px;
 	height: 158px;
 	margin-left: .5em;
@@ -182,12 +177,12 @@ iframe {
 .articles {
 	text-align: center;
 	width: 100%;
-	padding-top: .75em;
-	padding-bottom: .75em;
+	padding: .75em;
 	background-color: #6c122c;
-	box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
-							inset 0px 11px 9px -5px rgba(0,0,0,0.75);
+	/*box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
+				inset 0px 11px 9px -5px rgba(0,0,0,0.75);*/
 	color: #bdbdbd;
+	box-sizing: border-box;
 }
 
 .article {
@@ -211,13 +206,20 @@ iframe {
 	height: 73px;
 }
 
+.article hr {
+   text-align: left;
+   margin-top: 0;
+   width: 185px;
+   margin-left: 0;
+}
+
 #donate {
 	position: relative;
 	cursor: pointer;
 	background-color: #2e7d3a;
 	color: #bdbdbd;
 	width: 150px;
-	height: 65px;
+	height: 48px;
 	border-radius: .5em;
 	border: 1px solid #1b5320;
 	font-size: 24px;
@@ -257,12 +259,16 @@ iframe {
 
 .team {
 	width: 100%;
+	max-width: 1000px;
 	padding: 1em;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 	background-color: #6c122c;
-	box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
-							inset 0px 11px 9px -5px rgba(0,0,0,0.75);
+	/*box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
+				inset 0px 11px 9px -5px rgba(0,0,0,0.75);*/
 	color: #bdbdbd;
+	box-sizing: border-box;
 }
 
 .member h3 {
@@ -351,7 +357,7 @@ iframe {
 		border-radius: .5em;
 		background-color: #e0e0e0;
 		color: #424242;
-		box-shadow: 0 0 11px 2px rgba(0,0,0,0.75);
+		box-shadow: 0 0 6px 1px rgba(0,0,0,0.28);
 	}
 	.member { width: 98%;}
 	.summary { display: inline-block; }
@@ -366,14 +372,6 @@ iframe {
 	.article {
 		display: inline-block;
 		width: 30%;
-	}
-}
-
-@media screen and (min-width: 1000px) {
-	.team {
-		width: 1000px;
-		margin-left: auto;
-		margin-right: auto;
 	}
 }
 
