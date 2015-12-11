@@ -2,6 +2,7 @@
 		
 }
 
+html { overflow-y: scroll; }
 body {
 	background-color: #bdbdbd;
 	color: #424242;
@@ -12,11 +13,15 @@ body {
 h1, h2, h3, h4 {
 	font-weight: 400;
 }
-
+a { 
+	display: inline-block;
+	cursor: pointer;
+}
 h4 {
 	margin-bottom: 10px;
 }
 
+img { border: none; }
 hr {
 	 border: none;
    background-color: #2e7d3a;
@@ -24,26 +29,34 @@ hr {
 }
 
 .header {
+	text-align: left;
 	width: 100%;
-	text-align: right;
 }
 
+.side-bar { 
+	display: inline-block;
+}
 .logo {
 	display: inline-block;
-	float: left;
-	margin-left: .5em;
 }
 
 .logo img {
-	width: 50px;
-	display: block;
+	width: 48px;
+}
+
+.logo a { 
+	padding-left: 3px;
+	padding-right: 3px;
 }
 
 .title {
 	margin-left: auto;
 	text-align: right;
-	margin-right: .5em;
 	display: inline-block;
+	vertical-align: top;
+	position: absolute;
+	right: 0;
+	padding-right: 5px;
 }
 
 h1 { font-family: "Roboto Slab", sans-serif }
@@ -58,21 +71,13 @@ h1 { font-family: "Roboto Slab", sans-serif }
 	font-size: 18px;
 }
 
-.media-links {
-	display: none;
-	margin-left: .5em;
-	width: 344px;        /* Remove to make media links vertical. */
-	text-align: center;  /* Remove to make media links vertical. */
-	float: left;
+.links {
 	cursor: default;
 }
 
 .media {
-	width: 32%;             /* Remove to make media links vertical. */
-	display: inline-block;  /* Remove to make media links vertical. */
 	text-align: left;
-	margin-top: .25em;
-	margin-bottom: .25em;
+	text-align: center;
 }
 
 .media h5 {
@@ -82,21 +87,18 @@ h1 { font-family: "Roboto Slab", sans-serif }
 }
 
 .media-icon {
-	width: 24px;
-	height: 24px;
 	display: inline-block;
-	text-align: left;
-	margin-right: .5em;
 }
 
 .media-icon img {
 	line-height: 40px;
 	vertical-align: middle;
+	cursor: pointer;
 }
 
 .media-icon a {
-	cursor: pointer;
-	display: inline-block;
+	cursor: default;
+	padding: 14px;
 }
 
 #fb-name,
@@ -104,6 +106,8 @@ h1 { font-family: "Roboto Slab", sans-serif }
 #inst-name { 
 	opacity: 0;
 	cursor: default;
+	display: none;
+	width: 54px;
 }
 
 .landing {
@@ -186,7 +190,7 @@ iframe {
 }
 
 .article {
-	text-align: left;
+	text-align: center;
 	width: 100%;
 	margin: .5em auto;
 	vertical-align: top;
@@ -195,18 +199,30 @@ iframe {
 
 .article h4 {
 	font-family: "Roboto Slab", sans-serif;
+	border: 3px solid #2e7d3a;
+	border-radius: .5em;
+	padding: .5em;
+	text-align: center;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+	box-shadow: 0 0 2px 1px rgba(0,0,0,.28);
 }
 
 .article p {
+	display: none;
 	padding-right: 1em;
 }
 
 .article form {
+	display: none;
 	text-align: center;
 	height: 73px;
 }
 
 .article hr {
+	 display: none;
    text-align: left;
    margin-top: 0;
    width: 185px;
@@ -224,14 +240,14 @@ iframe {
 	border: 1px solid #1b5320;
 	font-size: 24px;
 	font-family: "Roboto Slab", sans-serif;
-	box-shadow: 0px 8px 0px 0px #1b5320;
+	box-shadow: 0px 6px 0px 0px #1b5320;
 }
 
 #donate:focus { outline: none;}
 #donate:active {
 	position: relative;
-	top: 5px;
-	box-shadow: 0 4px 0 0 #1b5320;
+	top: 3px;
+	box-shadow: 0 3px 0 0 #1b5320;
 }
 
 .team-header {
@@ -303,6 +319,8 @@ iframe {
 .portrait-right img {
 	max-width: 150px;
 	border-radius: .5em;
+	cursor: pointer;
+	box-shadow: 0 0 2px 1px rgba(0,0,0,0.28);
 }
 
 .summary {
@@ -318,6 +336,54 @@ iframe {
 	margin: 0; 
 }
 
+#overlay {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	text-align: center;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.85);
+}
+
+.dialog {
+	background-color: #bdbdbd;
+	width: 303px;
+	position: relative;
+	top: -50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+	border-radius: .5em;
+	padding: .5em;
+	box-shadow: 0 0 2px 1px rgba(0,0,0,0.28);
+}
+
+.dialog-close {
+	position: absolute;
+	height: 18px;
+	width: 18px;
+	right: 8px;
+	top: 10px;
+	cursor: pointer;
+}
+.dialog-content { 
+	position: relative;
+	padding-bottom: 75px;
+}
+
+.dialog-portrait {
+	opacity: 0;
+	width: 150px;
+	border-radius: .5em;
+	position: absolute;
+	bottom: -75px;
+	left: 84px;
+	box-shadow: 0 4px 2px -3px rgba(0,0,0,0.28);
+}
+
 @media screen and (min-width: 425px) {
 	.featured-icon { width: 20%; }
 
@@ -328,18 +394,26 @@ iframe {
 		font-size: 28px;
 		letter-spacing: 6px;
 	}
+
+	.dialog { width: 402px; }
+	.dialog-portrait { left: 134px; }
 }
 
 @media screen and (min-width: 560px) {
 	.landing { display: block; }
 	.title h1 { font-size: 36px; }
 	.title h3 { font-size: 24px; }
-	.media-links { display: inline-block; }
+	.links { display: inline-block; }
+	#fb-name,
+	#tw-name,
+	#inst-name { display: inline-block; }
 	h4 { font-size: 18px; }
 	iframe { 
 		width: 518px;
 		height: 295px;
 	}
+	.dialog { width: 484px; }
+	.dialog-portrait { left: 175px; }
 }
 
 @media screen and (min-width: 700px) { 
@@ -347,6 +421,25 @@ iframe {
 }
 
 @media screen and (min-width: 830px) {
+	.article {
+		display: inline-block;
+		width: 30%;
+		text-align: left;
+	}
+
+	.article hr,
+	.article p,
+	.article form { display: block; }
+	.article h4 {
+		border: none;
+		padding: 0;
+		text-align: left;
+		border-radius: 0;
+		width: 100%;
+		box-shadow: 0 0 0 0;
+		cursor: default;
+	}
+
 	.team-header { border: none; }
 	.team-header h1 { margin-bottom: 0; }
 	.team-header hr { display: block; }
@@ -357,21 +450,17 @@ iframe {
 		border-radius: .5em;
 		background-color: #e0e0e0;
 		color: #424242;
-		box-shadow: 0 0 6px 1px rgba(0,0,0,0.28);
+		box-shadow: 0 0 2px 1px rgba(0,0,0,0.28);
 	}
 	.member { width: 98%;}
+	.member img { cursor: default; }
 	.summary { display: inline-block; }
+	.portrait-left img,
+	.portrait-right img { box-shadow: 0 0 0 0;}
 	.portrait-left,
 	.portrait-right { width: 150px; }
 
 	.portrait-left { float: left; margin-right: .5em; }
 	.portrait-right { float: right; margin-left: .5em; }
-}
-
-@media screen and (min-width: 850px) {
-	.article {
-		display: inline-block;
-		width: 30%;
-	}
 }
 
