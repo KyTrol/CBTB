@@ -363,24 +363,26 @@ iframe {
 
 .dialog-close {
 	position: absolute;
-	height: 18px;
-	width: 18px;
-	right: 8px;
-	top: 10px;
+	height: 15px;
+	width: 15px;
+	right: -7px;
+	top: -7px;
+	padding: 16px;
 	cursor: pointer;
 }
 .dialog-content { 
 	position: relative;
-	padding-bottom: 75px;
+	padding-bottom: 60px;
+	font-size: 13px;
 }
 
 .dialog-portrait {
 	opacity: 0;
-	width: 150px;
+	width: 120px;
 	border-radius: .5em;
 	position: absolute;
-	bottom: -75px;
-	left: 84px;
+	bottom: -60px;
+	left: 99px;
 	box-shadow: 0 4px 2px -3px rgba(0,0,0,0.28);
 }
 
@@ -396,7 +398,8 @@ iframe {
 	}
 
 	.dialog { width: 402px; }
-	.dialog-portrait { left: 134px; }
+	.dialog-content { font-size: 14px; }
+	.dialog-portrait { left: 150px; }
 }
 
 @media screen and (min-width: 560px) {
@@ -413,7 +416,8 @@ iframe {
 		height: 295px;
 	}
 	.dialog { width: 484px; }
-	.dialog-portrait { left: 175px; }
+	.dialog-content { font-size: 15px; }
+	.dialog-portrait { left: 190px; }
 }
 
 @media screen and (min-width: 700px) { 
