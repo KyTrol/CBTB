@@ -23,7 +23,7 @@ h4 {
 
 img { border: none; }
 hr {
-	 border: none;
+   border: none;
    background-color: #2e7d3a;
    height: 2px;
 }
@@ -36,6 +36,7 @@ hr {
 .side-bar { 
 	display: inline-block;
 }
+
 .logo {
 	display: inline-block;
 }
@@ -112,7 +113,7 @@ h1 { font-family: "Roboto Slab", sans-serif }
 
 .landing {
 	width: 100%;
-	display: none;
+	/*display: none;*/
 	text-align: center;
 }
 
@@ -125,7 +126,7 @@ h1 { font-family: "Roboto Slab", sans-serif }
 }
 
 .featured {
-	display: block;
+	display: none;
 	width: 100%;
 	background-color: #6c122c;
 	/*box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
@@ -160,6 +161,16 @@ h1 { font-family: "Roboto Slab", sans-serif }
 .lngc h3 {
 	font-weight: 700;
 	font-family: "Roboto", sans-serif;
+}
+
+.lngc-box {
+	vertical-align: top;
+}
+
+.lngc-box:first-child p {
+	padding-left: 1em;
+	padding-right: 1em;
+	text-align: left;
 }
 
 iframe {
@@ -336,6 +347,10 @@ iframe {
 	margin: 0; 
 }
 
+.summary q {
+	
+}
+
 #overlay {
 	display: none;
 	position: fixed;
@@ -376,6 +391,10 @@ iframe {
 	font-size: 13px;
 }
 
+.dialog-content p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
 .dialog-portrait {
 	opacity: 0;
 	width: 120px;
@@ -391,6 +410,7 @@ iframe {
 
 	.title h1 { font-size: 27px; }
 	.title h3 { font-size: 20px; }
+	.side-bar{ margin-bottom: 2em; }
 	iframe { width: 389px; height: 222px; }
 	.team-header h1 {
 		font-size: 28px;
@@ -411,20 +431,25 @@ iframe {
 	#tw-name,
 	#inst-name { display: inline-block; }
 	h4 { font-size: 18px; }
-	iframe { 
+	/*iframe { 
 		width: 518px;
 		height: 295px;
-	}
+	}*/
 	.dialog { width: 484px; }
 	.dialog-content { font-size: 15px; }
 	.dialog-portrait { left: 190px; }
 }
 
-@media screen and (min-width: 700px) { 
+/*@media screen and (min-width: 700px) { 
 	iframe { width: 554px; height: 315px; }
-}
+}*/
 
 @media screen and (min-width: 830px) {
+	.lngc-box {
+		display: inline-block;
+		width: 49%;
+	}
+
 	.article {
 		display: inline-block;
 		width: 30%;
@@ -449,8 +474,7 @@ iframe {
 	.team-header hr { display: block; }
 	.team { 
 		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
+		margin: 1.5em auto;
 		border-radius: .5em;
 		background-color: #e0e0e0;
 		color: #424242;
@@ -468,3 +492,10 @@ iframe {
 	.portrait-right { float: right; margin-left: .5em; }
 }
 
+@media screen and (min-width: 1175px) {
+	iframe { width: 554px; height: 315px; }
+}
+
+@media screen and (min-width: 1400px) {
+	.lngc-box { font-size: 18px; }
+}

@@ -81,7 +81,7 @@ function isTeamCondensed() {
 function bindOverlay() {
     $('.member img').off('click');
     $('.member img').click(function() {
-        $('.dialog-content p').replaceWith($('#' + this.id).parent().siblings().children().clone());
+        $('.dialog-content p').replaceWith($('#' + this.id).parent().siblings().find('p').first().clone());
         $('.dialog-portrait').attr('src', $(this).attr('src'));
         $('.dialog-portrait').attr('alt', $(this).attr('alt'));
         animateOverlay();
