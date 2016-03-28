@@ -113,7 +113,6 @@ h1 { font-family: "Roboto Slab", sans-serif }
 
 .landing {
 	width: 100%;
-	/*display: none;*/
 	text-align: center;
 }
 
@@ -129,8 +128,6 @@ h1 { font-family: "Roboto Slab", sans-serif }
 	display: none;
 	width: 100%;
 	background-color: #6c122c;
-	/*box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
-				  inset 0px 11px 9px -5px rgba(0,0,0,0.75);*/
 	text-align: center;
 }
 
@@ -194,8 +191,6 @@ iframe {
 	width: 100%;
 	padding: .75em;
 	background-color: #6c122c;
-	/*box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
-				inset 0px 11px 9px -5px rgba(0,0,0,0.75);*/
 	color: #bdbdbd;
 	box-sizing: border-box;
 }
@@ -292,8 +287,6 @@ iframe {
 	margin-right: auto;
 	text-align: center;
 	background-color: #6c122c;
-	/*box-shadow: inset 0px -11px 9px -5px rgba(0,0,0,0.75),
-				inset 0px 11px 9px -5px rgba(0,0,0,0.75);*/
 	color: #bdbdbd;
 	box-sizing: border-box;
 }
@@ -410,7 +403,6 @@ iframe {
 
 	.title h1 { font-size: 27px; }
 	.title h3 { font-size: 20px; }
-	.side-bar{ margin-bottom: 2em; }
 	iframe { width: 389px; height: 222px; }
 	.team-header h1 {
 		font-size: 28px;
@@ -431,18 +423,10 @@ iframe {
 	#tw-name,
 	#inst-name { display: inline-block; }
 	h4 { font-size: 18px; }
-	/*iframe { 
-		width: 518px;
-		height: 295px;
-	}*/
 	.dialog { width: 484px; }
 	.dialog-content { font-size: 15px; }
 	.dialog-portrait { left: 190px; }
 }
-
-/*@media screen and (min-width: 700px) { 
-	iframe { width: 554px; height: 315px; }
-}*/
 
 @media screen and (min-width: 830px) {
 	.lngc-box {

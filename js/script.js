@@ -3,12 +3,6 @@ $(document).ready(function() {
     isMediaNamePresent();
     isArticleCondensed();
     isTeamCondensed();
-    
-    $(window).resize(function() {
-        isMediaNamePresent();
-        isArticleCondensed();
-        isTeamCondensed();
-    });
 });
 
 function isMediaNamePresent() {
@@ -17,17 +11,11 @@ function isMediaNamePresent() {
 
 function bindMediaFade() {
     var fbName = $("#fb-name");
-    var twName = $("#tw-name");
     var instName = $("#inst-name");
 
     $('#fb').hover(
         function () { fbName.stop().fadeTo(250, 1); },
         function () { fbName.stop().fadeTo(250, 0); }
-    );
-
-    $('#tw').hover(
-        function () { twName.stop().fadeTo(250, 1); },
-        function () { twName.stop().fadeTo(250, 0); }
     );
 
     $('#inst').hover(
@@ -38,7 +26,6 @@ function bindMediaFade() {
 
 function unbindMediaFade() {
     $('#fb').off('mouseenter mouseleave');
-    $('#tw').off('mouseenter mouseleave');
     $('#inst').off('mouseenter mouseleave');
 }
 
@@ -62,7 +49,6 @@ function bindArticleSlide() {
             else {
                 $(this).slideDown(250).fadeTo(300, 1);
             }
-            
         });
     });
 }
